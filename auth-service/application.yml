@@ -1,17 +1,17 @@
 spring:
-  application:
-    name: auth-service
-
-  config:
-    import: optional:configserver:http://localhost:8888
-
-server:
-  port: 8081
-
+  datasource:
+   password: 1234
+   username: postgres
+   url: jdbc:postgresql://localhost:5432/cliente
+  rabbitmq:
+       host: localhost
+       port: 5672
+       username: diego
+       password: 1234
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka  
 
   instance:
     prefer-ip-address: true
