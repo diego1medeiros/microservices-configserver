@@ -1,12 +1,4 @@
 spring:
-  cloud:
-    gateway:
-      routes:
-        - id: auth
-          uri: lb://AUTH
-          predicates:
-            - Path=/auth/**
-
   datasource:
     url: jdbc:postgresql://localhost:5432/auth
     username: postgres
